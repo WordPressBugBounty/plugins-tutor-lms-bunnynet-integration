@@ -168,6 +168,8 @@ class BunnyNet {
 		$response   = false;
 		if ( $video_info ) {
 			$bunny_video_id = tutor_utils()->array_get( 'source_bunnynet', $video_info );
+			$bunny_video_id = str_replace( 'https://video.bunnycdn.com/play/', ' ', $bunny_video_id );
+			$bunny_video_id = str_replace( 'https://iframe.mediadelivery.net/play/', ' ', $bunny_video_id );
 			$video_source   = $video_info->source;
 			if ( 'bunnynet' === $video_source && '' !== $bunny_video_id ) {
 				$response = $bunny_video_id;
@@ -190,7 +192,7 @@ class BunnyNet {
 		?>
 		<div class="tutor-video-player">
 			<div style="position: relative; padding-top: 56.25%;">
-				<iframe src="<?php echo esc_attr( $bunny_video_id ); ?>" loading="lazy" style="border: none; position: absolute; top: 0; height: 100%; width: 100%;" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen="true"></iframe>
+				<iframe src="<?php echo esc_url( $bunny_video_id ); ?>" loading="lazy" style="border: none; position: absolute; top: 0; height: 100%; width: 100%;" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen="true"></iframe>
 			</div>
 		</div>
 		<?php

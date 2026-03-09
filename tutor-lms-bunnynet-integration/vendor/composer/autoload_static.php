@@ -4,17 +4,17 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitb1cb6f266b07a9e34b9719bb1989c163
+class ComposerStaticInit9f26e18480fd734b1a2bf3ca77bd0fd0
 {
     public static $prefixLengthsPsr4 = array (
-        'T' => 
+        'T' =>
         array (
             'Tutor\\BunnyNetIntegration\\' => 26,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Tutor\\BunnyNetIntegration\\' => 
+        'Tutor\\BunnyNetIntegration\\' =>
         array (
             0 => __DIR__ . '/../..' . '/includes',
         ),
@@ -27,9 +27,9 @@ class ComposerStaticInitb1cb6f266b07a9e34b9719bb1989c163
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitb1cb6f266b07a9e34b9719bb1989c163::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitb1cb6f266b07a9e34b9719bb1989c163::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitb1cb6f266b07a9e34b9719bb1989c163::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit9f26e18480fd734b1a2bf3ca77bd0fd0::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit9f26e18480fd734b1a2bf3ca77bd0fd0::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit9f26e18480fd734b1a2bf3ca77bd0fd0::$classMap;
 
         }, null, ClassLoader::class);
     }
